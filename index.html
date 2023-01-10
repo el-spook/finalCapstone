@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>The 8000ers</title>
+</head>
+<body>
+    <!-- A header which contains the main page title (which also acts as an anchor tag) and a nav in the form of a list of links:  -->
+    <header id="header">
+        <h1 id ="home"><a href="#">The 8000ers</a></h1>
+        <nav>
+            <ul>
+                <!-- The links in the nav bar have classes of "selected" or "unselected" in order to style them in CSS -->
+                <li><a href="pages/mountains.html" class="unselected">Mountains</a></li>
+                <li><a href="pages/dangers.html" class="unselected">Dangers</a></li>
+                <li><a href="pages/about.html" class="unselected">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- The banner section will be used on every page: the h2 will remain the same, but the quotation will be different on each page. -->
+    <section id="quote">
+        <div>
+            <h2>The beauty, the risks, the irrationality.</h2>
+            <blockquote>"One of the hardest things on an expedition is knowing people are sitting at home, scared, and waiting for you to come back."</blockquote>
+            <p>&#8212 Cecilie Skog</p>
+        </div>
+    </section>
+
+    <!-- The overall introduction contains a h2 and multiple paragraphs. -->
+    <section id="intro">
+        <h2>Life Above 8 Kilometres</h2>
+        <p>Everyone has heard of Mount Everest, knowing that it's the highest point on the planet. Most people have also heard of K2, the second tallest mountain, and they might know that climbing it is an even more dangerous pursuit than taking on Everest.</p> 
+        <p>Fewer people are aware that Everest and K2 are just the tallest of fourteen mountains that reach above eight-thousand metres (well over 26,000 feet), a point so high in the troposphere that all mammals begin dying. Only a handful of birds are known to reach such heights.</p>
+        <p>This special group of mountains is collectively known as the 8000ers. Amongst mountaineers, the point above 8000 metres is called "the death zone".</p>
+        <p>In spite of the extreme environment, every year there are hundreds of people who take on the challenge of reaching the summits of these natural wonders, effectively racing against their own deaths. This site hopes to give a small background to the wonder of the mountains, what makes them so dangerous, and why, to some, they are irresistible.</p>
+    </section>
+
+    <!-- This gallery section is unique to the homepage. After the explanatory h2, there is a div for the gallery. 
+    Each picture is contained within a div called "photo", and there is an additional div called "overlay" that contains the name of the mountain. -->
+    <section id="pictures">
+        <h2>The 14 Peaks in Pictures</h2>
+        <div class="gallery">
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Everest</h2>
+                </div>
+                <!-- Each image has an alt description -->
+                <img src="images/everest.jpg" alt="The white peak of Everest against a deep blue and purple sky.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>K2</h2>
+                </div>
+                <img src="images/k2.jpg" alt="The pyramid-like peak of K2 with snow or mist blowing off it.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Kanchenjunga</h2>
+                </div>
+                <img src="images/kanchenjunga.jpg" alt="The pointy peak of a mountain lit up in orange and red at sunset.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Lhotse</h2>
+                </div>
+                <img src="images/lhotse.jpg" alt="The rocky and snow-covered peak of a mountain against a bright blue sky.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Makalu</h2>
+                </div>
+                <img src="images/makalu.jpg" alt="A jagged summit with a cloud formation making a strange halo above it.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Cho Oyu</h2>
+                </div>
+                <img src="images/chooyu.jpg" alt="A very snowy mountain peak raising above other edges, slightly obscured by cloud.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Dhaulagiri</h2>
+                </div>
+                <img src="images/dhaulagiri.jpg" alt="A huge rocky mountain from a distance, with only a little snow on the very top, against a blue and cloudy sky.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Manaslu</h2>
+                </div>
+                <img src="images/manaslu.jpg" alt="A jagged, snow-covered pair of peaks lit up in yellow by the setting sun against a navy sky.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Nanga Parbat</h2>
+                </div>
+                <img src="images/nangaparbat.jpg" alt="A jagged pair of summits with very snowy slopes. Some forests are in the foreground.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Annapurna</h2>
+                </div>
+                <img src="images/annapurna.jpg" alt="A rocky wall with some snow that leads up to a jagged edge.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Gasherbrum I</h2>
+                </div>
+                <img src="images/gasherbrum1.jpg" alt="A pair of snowy peaks taken from a high point, and showing snowy mountain ranges going on forever in the background.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Broad Peak</h2>
+                </div>
+                <img src="images/broadpeak.jpg" alt="A jagged and rocky summit, covered with snow, taken only a few hundred metres away.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Gasherbrum II</h2>
+                </div>
+                <img src="images/gasherbrum2.jpg" alt="A series of snow covered peaks, with one higher and rockier than the rest, against a bright blue sky.">
+            </div>
+
+            <div class="photo">
+                <div class="overlay">
+                    <h2>Shishapangma</h2>
+                </div>
+                <img src="images/shishapangma.jpg" alt="In the background, a white mountain with a jagged edge and summit. In the foreground, the brown earth and rocks of nearer mountains and hills.">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,389 @@
+/* Using @font-face to use a custom font on the site for headings: */
+@font-face {
+    font-family: 'krona_oneregular';
+    src: url('../fonts/kronaone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/kronaone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Setting the page content to be centred and not take up the full width, plus setting the main font:   */
+body {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Remove the blue colour and underline for all links on the page */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Establish the font for all titles: */
+h1,
+h2,
+h3 {
+    font-family: 'krona_oneregular';
+}
+
+/* STYLES FOR THE HEADER */
+
+/* Setting a page responsive size for the h1: */
+h1 {
+    font-size: 3vw;
+}
+/* Use flex to put the h1 on the left and the nav on the right:  */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Get rid of the list style for the nav elements and arrange them alongside each other:  */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline;
+    margin-left: 10px;
+}
+/* Set the nav links to share the heading font, have a responsive size, and have an underline that shows on hover:  */
+nav a {
+    font-family: 'krona_oneregular';
+    font-size: 1.5vw;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+/* The current page will have an underline in the nav bar. */
+.selected {
+    border-color: rgb(0, 0, 0);
+}
+/* When the user hovers over a link for a page they aren't on, it will be underlined in blue */
+.unselected:hover {
+    border-color: rgb(32, 58, 143);
+}
+/* When the user hovers over a link for a page they are already on, it will appear to have no underline: */
+.selected:hover {
+    border-color: rgb(255, 255, 255);
+}
+
+/* STYLES FOR THE QUOTE SECTION */
+
+/* Creates extra space above and below the banner: */
+#quote {
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+}
+/* Makes the div narrower than other elements on the page, and centres the text. */
+#quote div {
+    max-width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px; 
+    text-align: center;
+}
+
+/* Altering the sizes of the text in this section, plus giving it a unique colour: */
+#quote h2 {
+    font-size: 2.5vw;
+    color: rgb(32, 58, 143);
+}
+#quote blockquote,
+#quote p {
+    font-size: 1.3vw;
+    color: rgb(32, 58, 143);
+}
+
+/* MORE GENERAL PAGE STYLES: */
+
+/* Sets the font sizes for elements on all pages: */
+h2 {
+    font-size: 2vw;
+}
+h3 {
+    font-size: 1.6vw;
+}
+p, 
+#intro li,
+#links li,
+#form label,
+#submit {
+    font-size: 1.5vw;
+}
+/* Setting all sections (apart from the quote and pictures section) to have the same width and spacing: */
+section {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vw;
+}
+
+/* STYLES UNIQUE TO HOME PAGE: */
+
+/* Making this section wider than all the others */
+#pictures {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90vw;
+}
+/* But ensuring the heading lines up with the section above */
+#pictures h2 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vw;
+}
+/* Using flex to arrange all the pictures and line them up neatly: */
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* The photo div contains an overlay div that will appear on hover with a heading, plus the image itself.
+Here the max size is established and position: relative is used to match the overlay up with it. */
+.photo {
+    margin: 0.8vw;
+    position: relative;
+    max-height: 400px;
+}
+/* The transition time for the overlay to appear is given. */
+.photo img {
+    max-height: 400px;
+    transition: 0.3s;
+}
+/* The overlay is positioned absolutely on the photo div, but is invisible until the user mouses over.
+This makes the background color appear along with the other contents of the div - the h2. */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 58, 143, 0.65);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* The overlay appears on hover: */
+.photo:hover .overlay {
+    opacity: 1;
+  }
+/* The image is greyed out on hover to make the background color appear more effective: */
+.photo:hover img {
+    filter: grayscale(100%) ;
+}
+/* The h2 is also positioned absolutely and is aligned to be centred on the image:*/
+.photo h2 {
+    position: absolute;
+    font-size: 1.8vw;
+    text-align: center;
+    color: #fff;
+}
+
+/* STYLES UNIQUE TO THE MOUNTAINS PAGE: */
+
+/* The table of information is centred in the middle of the page:*/
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+/* The picture of the table to be used later is set to not be shown: */
+#tableImage {
+    display: none;
+}
+/* The paragraph that tells users to re-orientate their devices is also not shown. */
+#tablePara {
+    display: none;
+    color: rgb(32, 58, 143);
+}
+/* The table is given a single set of borders in dark blue: */
+table, th, td {
+    border: 2px solid rgb(32, 58, 143);
+    border-collapse: collapse;
+}
+/* Styling the table cells: */
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-size: 1.3vw;
+}
+/* Sets a slight transition time for the hover effect: */
+tr {
+    transition: 0.2s;
+}
+/* When a user hovers on a row, it turns to blue and the font colour changes: */
+tr:hover {
+    background-color:rgb(32, 58, 143);
+    color:#fff;
+}
+
+/* STYLES UNIQUE TO THE DANGER PAGE: */
+
+/* Removes the indentation of the list items, but keeping the bullet points: */
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+  }
+/* Gives the links in this section a colour, so they can be understood as links: */
+#links a {
+    color:rgb(32, 58, 143);
+}
+
+/* STYLES UNIQUE TO THE ABOUT PAGE: */
+
+/* Uses flex to place the div and image alongside each other: */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Gives each element a width, with a slight margin in between: */
+#about div {
+    width: 70%;
+    margin-right: 10px;
+}
+#about img {
+    max-width: 30%;
+}
+/* Creates space between the various inputs and paragraphs in the form: */
+input {
+    margin-bottom: 10px;
+}
+form p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* Styles the submit button: */
+#submit {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+/* RESPONSIVE STYLES: */
+
+/* When the page size reaches 950px wide, the following changes will occur: */
+@media screen and (max-width: 950px) {
+    /* The size of the images in the gallery on the homepage will be smaller: */
+    .photo img {
+        max-height: 300px;
+    }
+    /* The overlay will become permanently visible, but lose its background colour: */
+    .overlay {
+        opacity: 1;
+        position: absolute;
+        background: none;
+    }
+    /* Instead, the name of the mountain will be fixed in the bottom right of each image: */
+    .photo h2 {
+        position: absolute;
+        font-size: 20px;
+        text-align: end;
+        color: #fff;
+        bottom: 0;
+        right: 0;
+        background-color: rgb(32, 58, 143);
+        opacity: 1;
+        padding: 10px;
+    }
+
+    /* Also change the font sizes of all elements except the header and headings to be uniform: */
+    p,
+    #intro li,
+    #links li,
+    #form label,
+    #submit,
+    #quote blockquote,
+    #quote p,
+    nav a {
+        font-size: 14px;
+    }
+}
+
+/* When the page is less than 800px, remove the table and show the image instead: */
+@media screen and (max-width: 800px) {
+    #table table {
+        display: none;
+    }
+    /* By using flex on the parent element and setting the image's width to 100%, the image will also be responsive to screen size: */
+    #tableImage {
+        display: flex;
+    }
+    #tableImage img {
+        width: 100%;
+    }
+
+    /* Sets the text sizes for the various headings: */
+    h2,
+    #quote h2 {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+
+    /* Lets the quote div take up more width on the page: */
+    #quote div {
+        max-width: 80vw;
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    /* Change the proportions of the flex elements on the about page, so the image doesn't get too small: */
+    #about div {
+        width: 60%;
+    }
+    #about img {
+        max-width: 40%;
+    }
+}
+
+/* When the page is less than 600px... */
+@media screen and (max-width: 600px) {
+    /* Make the nav links appear beneath the h1, instead of alongside. */
+    header {
+        flex-direction: column;
+    }
+    /* Similarly, make the picture appear beneath the paragraphs on the about page, instead of alongside. */
+    #about {
+        flex-direction: column;
+    }
+    /* Set the flex elements to now take up 100% of the room, instead of the previous proportions: */
+    #about div {
+        width: 100%;
+        margin-right: 0px;
+    }
+    #about img {
+        max-width: 100%;
+    }
+    /* Set the width of the comment area so it doesn't spill over: */
+    textarea {
+        width: 100%;
+    }
+}
+
+/* When the page is less than 550px... */
+@media screen and (max-width: 550px) {
+    /* Hide the image of the table when it gets too small. */
+    #tableImage {
+        display: none;
+    }
+    /* And instead display the paragraph that informs users to rotate their device in order to see the table: */
+    #tablePara {
+        display: flex;
+    }
+}

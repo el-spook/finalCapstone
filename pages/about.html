@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>The 8000ers</title>
+</head>
+
+<body>
+    <!-- A header which contains the main page title (which also acts as an anchor tag) and a nav in the form of a list of links:  -->
+    <header>
+        <h1 id ="home"><a href="../index.html">The 8000ers</a></h1>
+        <nav>
+            <ul>
+                <!-- The links in the nav bar have classes of "selected" or "unselected" in order to style them in CSS -->
+                <li><a href="mountains.html" class="unselected">Mountains</a></li>
+                <li><a href="dangers.html" class="unselected">Dangers</a></li>
+                <li><a href="#" class="selected">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- The banner section will be used on every page: the h2 will remain the same, but the quotation will be different on each page. -->
+    <section id="quote">
+        <div>
+            <h2>The beauty, the risks, the irrationality.</h2>
+            <blockquote>"When I say I wish I'd never gone, I really mean that."</blockquote>
+            <p>&#8212 Jon Krakauer</p>
+        </div>
+    </section>
+
+    <!-- This section is based on the intro section on the homepage, but also includes a photo. -->
+    <section id="about">
+        <!-- The h2 and p elements are contained in a div to allow them to be positioned to the left while the picture will be on the right. -->
+        <div>
+            <h2>About Me, an Avid Non-Climber</h2>
+            <p>I'm Jess, an armchair mountaineer. While I love hiking and the outdoors, there is never any chance of me climbing any sort of mountain where climbing skills are needed (as I have none), or where there is any risk of altitude sickness, avalanches, frostbite, or if there's a need to camp in temperatures below 10&#8451, or where I'd have to navigate heights. That definitely rules out most mountains above 3000 metres, and probably most that are less than that.</p>
+            <p>As is probably clear, I'm extremely risk averse, and that's no doubt why I'm slightly obsessed with the people who risk everything to get to the top of the world's highest peaks.</p>
+        </div>
+        <img src="../images/me.jpg" alt="A woman with a hat and rain-speckled glasses with a stone circle and hilly natural landscape behind her.">
+    </section>
+
+    <!-- The form is unique to this page: after the h3 and p tag, there is a form element: -->
+    <section id="form">
+        <h3>Your Comments</h3>
+        <p>I would be very happy to receive your comments on the 8000ers. Alternatively, or in addition, you can subscribe to my monthly newsletter.</p>
+        <form>
+            <!-- There are two text inputs and one text area, and each has a label. 
+            There are additional attributes that would identify the information if it was submitted -->
+            <label for="name">Full name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="comments">Please write your message here:</label><br>
+            <!-- The rows and cols attributes make the textarea a particular size -->
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            <p>Please indicate whether you'd like to subscribe to my monthly newsletter:</p>
+            <!-- There are two radio buttons with labels: -->
+            <input type="radio" id="yes" name="subscribe" value="Yes">
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="subscribe" value="No">
+            <label for="no">No</label><br>
+            <!-- There is a submit button at the end of the form. It has an id so it can be styled: -->
+            <input id = "submit" type="submit" value="Submit">
+        </form>
+    </section>
+</body>
+</html>
