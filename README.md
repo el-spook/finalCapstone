@@ -23,6 +23,8 @@ Open the folder and double click on index.html.
 
 You should now be able to peruse the site and learn a little about the world's highest mountains.
 
+![The responsive image gallery](https://www.dropbox.com/s/x41qo1nm3zohp6z/Gallery.png?dl=0)
+
 ### Credits
 
 I, [el-spook](https://github.com/el-spook), made this project on my own.
