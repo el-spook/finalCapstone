@@ -24,8 +24,8 @@ Open the folder and double click on index.html.
 You should now be able to peruse the site and learn a little about the world's highest mountains.
 
 ![The homepage](https://images.squarespace-cdn.com/content/v1/5e0dc9494d4c716d3ff361ec/1673349489488-MY5VSXQRWKQ05V96HIIT/mountains_homepage.png?format=2500w)
-![The responsive image gallery](https://www.dropbox.com/s/x41qo1nm3zohp6z/Gallery.png?raw=1)
-![The responsive table of mountain info](https://500px.com/photo/1059510839/mountains_table-by-jess-ghost)
+![The responsive image gallery](https://images.squarespace-cdn.com/content/v1/5e0dc9494d4c716d3ff361ec/1673349461036-9EBN2CQ1D2G70L8Q4OOR/mountains_gallery.png?format=1000w)
+![The responsive table of mountain info](https://images.squarespace-cdn.com/content/v1/5e0dc9494d4c716d3ff361ec/1673349495976-UV301OOG5N8JRWXBDI3D/mountains_table.png?format=2500w)
 
 ### Credits
 
